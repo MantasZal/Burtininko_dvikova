@@ -36,7 +36,7 @@ public class GameLogic {
                 calculateDamage(Spell.values()[2], player, opponent);
             } else {
                 System.out.println("Invalid choice you lost 10 off your health.");
-//            player.setHealth(player.getHealth() - 10); veliau padryt ir jog ismestu vel pasirenkima
+            player.setHealth(player.getHealth() - 10);
             }
             System.out.println("Opponent's stats: " + opponent.getHealth() + " health and " + opponent.getMana() + " mana.");
             if(isAlive(opponent)) {
@@ -61,8 +61,8 @@ public class GameLogic {
     }
     public static void calculateDamage(Spell spell, Wizard caster, Wizard target) {
         if (caster.getMana() < spell.getManaCost()) {
-            System.out.println(caster.getName() + " does not have enough mana to cast " + spell.getName() + "! you lost 5 off your health.");
-//            caster.setHealth(caster.getHealth() - 5); veliau padryt
+            System.out.println(caster.getName() + " does not have enough mana to cast " + spell.getName());
+
         }
         caster.setMana(caster.getMana() - spell.getManaCost());
         target.setHealth(target.getHealth() - spell.getDamage());

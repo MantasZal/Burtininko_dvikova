@@ -5,7 +5,7 @@ module cupcakes.burtininko_dvikova {
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
+    requires openai.java.core;
+    requires java.net.http;
 
-    opens cupcakes.burtininko_dvikova to javafx.fxml;
-    exports cupcakes.burtininko_dvikova;
 }

@@ -1,5 +1,8 @@
 package cupcakes.burtininko_dvikova.model;
 
+import java.util.Arrays;
+import java.util.Optional;
+
 public enum Spell {
     FIREBALL(1,"Fire Ball", 10, 20, 0),
     HEAL(2,"Healing", 8, 0, 15),
@@ -36,5 +39,11 @@ public enum Spell {
 
     public int getHealing() {
         return healing;
+    }
+
+    public static Optional<Spell> fromNum(int num) {
+        return Arrays.stream(values())
+                .filter(spell -> spell.getNum() == num)
+                .findFirst();
     }
 }
