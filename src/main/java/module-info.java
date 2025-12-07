@@ -7,5 +7,9 @@ module cupcakes.burtininko_dvikova {
     requires org.kordamp.bootstrapfx.core;
     requires openai.java.core;
     requires java.net.http;
+    requires junit;
+
+    exports cupcakes.burtininko_dvikova.model;
+    exports cupcakes.burtininko_dvikova.game_logic;
 
 }
