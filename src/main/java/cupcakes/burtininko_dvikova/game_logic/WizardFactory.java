@@ -9,8 +9,4 @@ public class WizardFactory {
     public Wizard createPlayer(String name) {
         return new Wizard(name, DEFAULT_HEALTH, DEFAULT_MANA);
     }
-
-    public Wizard createOpponent(String name) {
-        return new Wizard(name, DEFAULT_HEALTH, DEFAULT_MANA);
-    }
 }

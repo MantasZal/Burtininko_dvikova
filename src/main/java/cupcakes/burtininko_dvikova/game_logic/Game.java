@@ -12,7 +12,7 @@ public class Game {
     public static void main(String[] args) {
         WizardFactory factory = new WizardFactory();
         Wizard player = factory.createPlayer(PLAYER_NAME);
-        Wizard opponent = factory.createOpponent(OPPONENT_NAME);
+        Wizard opponent = factory.createPlayer(OPPONENT_NAME);
 
         AIStrategy aiStrategy = new RandomAIStrategy();
         BattleEngine engine = new BattleEngine();
